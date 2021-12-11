@@ -1,0 +1,353 @@
+
+
+:root{
+	--main-bg-color: #eff5fe;
+	--border-color: #0288d147;
+}
+
+
+
+body,html{
+	font-family: system-ui;
+	background: var(--main-bg-color);
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body,.drop-zone
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+
+.upload-container
+{
+	background: #ffffff;
+	border-radius: 25px;
+	box-shadow: 0px 20px 20px #180f0f85;
+
+}
+
+.op{
+	display: flex;
+	flex-direction: row;
+}
+
+.drop-zone{
+	
+	width: 500px;
+	min-height: 250px;
+	
+	border: 2px dashed var(--border-color);
+	margin: 30px;
+	border-radius: 10px;
+	transition: all .2s ease;
+}
+
+.dragged.drop-zone{
+	background: var(--main-bg-color);
+	border-color: #2196f3;
+}
+
+.icon-container{
+	width: 75px;
+	height: 100px;
+	position: relative;
+}
+
+.icon-container img{
+	width: 100px;
+	position: absolute;
+	transition: transform 250ms ease-in-out;
+}
+
+.icon-container .center{
+	z-index: 2;
+}
+
+.icon-container .right,.icon-container .left
+{
+	filter: grayscale(.5);
+	transform: scale(.9);
+}
+
+.dragged .icon-container .right
+{
+	transform: rotate(12deg) translateX(20px) scale(.9);
+	transform-origin:bottom ;
+}
+.dragged .icon-container .left
+{
+	transform: rotate(-12deg) translateX(-20px) scale(.9);
+	transform-origin:bottom ;
+}
+
+.dragged .icon-container .center
+{
+	transform: translateY(-5px);
+}
+
+
+#fileinput
+{
+	display: none;
+}
+
+.browseBtn
+{
+	color: #2196f3;
+	cursor: pointer;
+}
+
+.title
+{
+	margin-top: 10px;
+}
+
+
+.btn{
+
+
+	margin-top: 20px;
+	outline: none;
+	display: block;
+	border: 0;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 500;
+	padding: 12px 16px;
+	border-radius: 16px;
+	background:#2196f3 ;
+	color: #ffffff;
+	cursor: pointer;
+	transition: 0.5s ease;
+    align-items: center;
+    margin-right: 15px;
+
+}
+
+.btn-de{
+
+
+	margin-top: 20px;
+	margin-left: 15px;
+	outline: none;
+	display: block;
+	font-weight: 500;
+	border: solid 2px #2196f3;
+	font-size: 14px;
+	line-height: 1;
+	padding: 12px 16px;
+	border-radius: 16px;
+	background:#ffffff ;
+	color: #2196f3;
+	cursor: pointer;
+	transition: all 200ms linear;
+
+}
+
+
+.btn:hover,
+.btn:focus
+{
+	background: #005C99;
+}
+
+.btn:active
+{
+	background: #003659;
+}
+
+.btn-de:hover,
+.btn-de:focus
+{
+	background: #2196f3;
+	color: #ffffff;
+}
+
+.btn:active
+{
+	background: #003659;
+}
+
+
+.image
+{
+	margin-top: 30px;
+}
+
+
+
+/**{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: system-ui;
+}
+
+body{
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	
+	min-height: 100vh;
+	background: #e0eafc;
+}
+
+.container
+{
+
+
+	
+	max-width: 650px;
+	width: 100%;
+	padding: 30px;
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: rgba(149,157,165,0.2) 0px 8px 24 px;
+	margin-top: 20px;
+
+
+
+}
+
+.drag-area
+{
+	height: 400px;
+	border: 3px dashed #e0eafc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 10px auto;
+
+}
+
+h3
+{
+	margin-bottom: 20px;
+	font-weight: 500;
+
+}
+
+.drag-area .icon{
+		width: 75px;
+	height: 100px;
+	position: relative;
+}
+
+
+.drag-area .header
+{
+	font-size: 20px;
+	font-weight: 500;
+	color: #34495e;
+}
+
+.drag-area .support{
+	font-size: 12px;
+	color: gray;
+	margin: 10px 0 15px 0;
+}
+
+.drag-area .button
+{
+	font-size: 20px;
+	font-weight: 500;
+	color: #1683ff;
+	cursor: pointer;
+}
+
+.drag-area.active
+{
+	border: 2px solid #1683ff;
+}
+
+.drag-area img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.btn{
+
+		display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+
+
+	margin-top: 20px;
+	outline: none;
+	display: block;
+	border: 0;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 500;
+	padding: 12px 16px;
+	border-radius: 16px;
+	background:#2196f3 ;
+	color: #ffffff;
+	cursor: pointer;
+	transition: 0.5s ease;
+    align-items: center;
+    margin-right: 15px;
+ 
+
+}
+
+.btn-de{
+
+			display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+
+
+	margin-top: 20px;
+	outline: none;
+	display: block;
+	font-weight: 500;
+	border: solid 2px #2196f3;
+	font-size: 14px;
+	line-height: 1;
+	padding: 12px 16px;
+	border-radius: 16px;
+	background:#ffffff ;
+	color: #2196f3;
+	cursor: pointer;
+	transition: all 200ms linear;
+
+
+}
+
+
+.btn:hover,
+.btn:focus
+{
+	background: #005C99;
+}
+
+.btn:active
+{
+	background: #003659;
+}
+
+.btn-de:hover,
+.btn-de:focus
+{
+	background: #2196f3;
+	color: #ffffff;
+}
+
+.btn:active
+{
+	background: #003659;
+}*/

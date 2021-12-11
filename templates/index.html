@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Image ENcryption</title>
+	<link rel="stylesheet" href="/static/style.css">
+</head>
+
+
+<body>
+
+	<h1>Image Encryption</h1>
+
+		<section class="upload-container">
+
+		  	  <div class="drop-zone">
+		  	  	<div class="icon-container">
+		  	  	   <img src="./static/file.svg" alt="" class="center" draggable="false">
+		  	  	   <img src="./static/file.svg" alt="" class="right" draggable="false">
+		  	  	   <img src="./static/file.svg" alt="" class="left" draggable="false">
+		  	  	</div>
+                    
+
+		             
+		           
+		  	  </div>
+		 </section>
+		                     <div class="title"><b>Choose your file from here, <span class="browseBtn">browse</span></div><b>
+		  	  		<form method="POST" action="/" enctype="multipart/form-data">
+		            <input type="file" name="userfile" id="fileinput" placeholder="Your Image">
+		         <div class="op">
+		            <button class="btn" name="encrypt">Encrypt</button>
+		              <button class="btn-de" name="decrypt">Decrypt</button>
+                 </div>
+                 </form>
+	              
+		  	  	
+
+		  	  	
+
+<script src="{{url_for('static',filename='index.js')}}"></script>
+
+
+
+   <div class="image">
+	<img src="{{ encryption }}">
+</div>
+   
+      
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+ <head>
+ 	<title>Image Encryption</title>
+ 	<link rel="stylesheet" href="/static/style.css">
+ 	
+ </head>
+
+
+ <body>
+       <h1>Image Encryption</h1>
+
+       <div class="container">
+       	<h3>Upload your file :</h3>
+       	<div class="drag-area">
+       		<div class="icon">
+       			<img src="./static/file.svg" alt="" class="center" draggable="false">
+       		</div>
+       		<span class="header">Drag & Drop </span>
+       		<span class="header">or <span class="button">browse</span>
+       	</span>
+
+       	       	<form method="POST" action="/" enctype="multipart/form-data">
+       		<input type="file" name="userfile" hidden />
+       
+       	<span class="support">Supports: JPEG,sJPG,PNG</span>
+       </div>
+
+
+   </div>
+
+        <div class="op">
+		<button class="btn" name="encrypt">Encrypt</button>
+		<button class="btn-de" name="decrypt">Decrypt</button>
+        </div>
+        </form>
+
+     <script src="{{url_for('static',filename='index.js')}}"></script>
+
+
+        <div class="image">
+	<img src="{{ encryption }}">
+</div>
+
+
+ 
+</body>
+<html>
+ -->
+
+
+
