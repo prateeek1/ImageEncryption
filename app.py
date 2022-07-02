@@ -13,8 +13,8 @@ def hello():
 def marks():
     if request.method=='POST':
         f=request.files['userfile']
-        path="./static/{}".format(f.filename)
-        f.save(path)
+        #path="./static/{}".format(f.filename)
+        #f.save(path)
         
         if 'encrypt' in request.form:
             my_img=pj.encrypt(path)
