@@ -17,10 +17,10 @@ def marks():
         #f.save(path)
         
         if 'encrypt' in request.form:
-            my_img=pj.encrypt(path)
+            my_img=pj.encrypt(f)
                 
         if 'decrypt' in request.form:
-            my_img=pj.decrypt(path)
+            my_img=pj.decrypt(f)
 
         from PIL import Image
         img = Image.fromarray(my_img, 'RGB')
