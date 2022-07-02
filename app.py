@@ -24,8 +24,8 @@ def marks():
 
         from PIL import Image
         img = Image.fromarray(my_img, 'RGB')
-        img.save('./static/my.png')
-        img='./static/my.png'
+        #img.save('./static/my.png')
+        #img='./static/my.png'
 
 
 
